@@ -1,0 +1,47 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">marc editor</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <pre>{{ record | json }}</pre>
+    </div>
+    
+    <div class="col-md-6">
+        <form>
+        
+            <button ng-click="record.addField('002', 'tag002');">Add Control Field Tag</button><br/>
+            <button ng-click="record.removeField('002', 'tag002');">Remove Control Field Tag</button><br/>
+            
+            <button ng-click="record.addField('100', DataField('1','2'));">Add Data Field Tag</button><br/>
+            <button ng-click="record.removeField('100', DataField('1','2'));">Remove Data Field Tag</button><br/>
+            
+            100 First <br/>
+            Ind1: <input ng-model="record.100[0].ind1"/>
+            Ind2: <input ng-model="record.100[0].ind2"/><br />
+            a: <input ng-model="record.100[0].a[0]"/>
+            <button ng-click="record.100[0].addSubfield('a','');">Add</button>
+            <button ng-click="record.100[0].removeSubfield('a','');">Remove</button><br />
+            d: <input ng-model="record.100[0].d[0]"/> <br />
+            b: <input ng-model="record.100[0].b[0]"/> <br />
+            
+            100 Second<br/>
+            Ind1: <input ng-model="record.100[1].ind1"/>
+            Ind2: <input ng-model="record.100[1].ind2"/><br />
+            a: <input ng-model="record.100[1].a[0]"/>
+            <button ng-click="record.100[1].addSubfield('a','');">Add</button>
+            <button ng-click="record.100[1].removeSubfield('a','');">Remove</button><br />
+            d: <input ng-model="record.100[1].d[0]"/> <br />
+            b: <input ng-model="record.100[1].b[0]"/> <br />
+                
+            
+        </form>
+    </div>
+    
+</div>
+    

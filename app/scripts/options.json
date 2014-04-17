@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "016": {
+            "label": "Library of Congress Control Number",
+            "fields": {
+                "item": {
+                    "fields": {
+                        "ind1": {
+                            "optionLabels": [
+                              "Source specified in subfield $2",
+                              "Library and Archives Canada"
+                            ]
+                          },
+                          "ind2": {
+                            "optionLabels": [
+                              "Undefined"
+                            ]
+                          }
+                    }
+                }
+            }
+        }
+    }
+}

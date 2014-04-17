@@ -1,0 +1,68 @@
+{
+	"title" : "Marc21",
+	"type" : "object",
+	"properties" : {
+        "016" : {
+			"title" : "National Bibliographic Agency Control Number",
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"ind1" : {
+						"title" : "Indicator 1",
+						"type" : "string",
+						"enum" : [
+							"#",
+                            "7"
+						]
+					},
+					"ind2" : {
+						"title" : "Indicator 2",
+						"type" : "string",
+						"enum" : [
+							"#"
+						]
+					},
+					"a" : {
+						"title" : "Record control number",
+						"type" : "array",
+						"items" : {
+							"type" : "string",
+							"minItems" : 0,
+							"maxItems" : 1
+						}
+					},
+					"z" : {
+						"title" : "Canceled/invalid control number",
+						"type" : "array",
+						"items" : {
+							"type" : "string",
+							"minItems" : 0,
+							"maxItems" : 99
+						}
+					},
+					"2" : {
+						"title" : "Source",
+						"type" : "array",
+						"items" : {
+							"type" : "string",
+							"minItems" : 0,
+							"maxItems" : 1
+						}
+					},
+					"8" : {
+						"title" : "Field link and sequence number",
+						"type" : "array",
+						"items" : {
+							"type" : "string",
+							"minItems" : 0,
+							"maxItems" : 99
+						}
+					}
+				},
+				"minItems" : 0,
+				"maxItems" : 99
+			}
+		}
+	}
+}
