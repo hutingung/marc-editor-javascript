@@ -23,42 +23,48 @@
 							"#"
 						]
 					},
-					"a" : {
-						"title" : "Record control number",
-						"type" : "array",
-						"items" : {
-							"type" : "string",
-							"minItems" : 0,
-							"maxItems" : 1
-						}
-					},
-					"z" : {
-						"title" : "Canceled/invalid control number",
-						"type" : "array",
-						"items" : {
-							"type" : "string",
-							"minItems" : 0,
-							"maxItems" : 99
-						}
-					},
-					"2" : {
-						"title" : "Source",
-						"type" : "array",
-						"items" : {
-							"type" : "string",
-							"minItems" : 0,
-							"maxItems" : 1
-						}
-					},
-					"8" : {
-						"title" : "Field link and sequence number",
-						"type" : "array",
-						"items" : {
-							"type" : "string",
-							"minItems" : 0,
-							"maxItems" : 99
-						}
-					}
+                    "subfields" : {
+                        "title" : "Subfields",
+                        "type" : "object",
+                        "properties" : {
+                            "a" : {
+                                "title" : "Record control number",
+                                "type" : "array",
+                                "items" : {
+                                    "type" : "string",
+                                    "minItems" : 0,
+                                    "maxItems" : 1
+                                }
+                            },
+                            "z" : {
+                                "title" : "Canceled/invalid control number",
+                                "type" : "array",
+                                "items" : {
+                                    "type" : "string",
+                                    "minItems" : 0,
+                                    "maxItems" : 99
+                                }
+                            },
+                            "2" : {
+                                "title" : "Source",
+                                "type" : "array",
+                                "items" : {
+                                    "type" : "string",
+                                    "minItems" : 0,
+                                    "maxItems" : 1
+                                }
+                            },
+                            "8" : {
+                                "title" : "Field link and sequence number",
+                                "type" : "array",
+                                "items" : {
+                                    "type" : "string",
+                                    "minItems" : 0,
+                                    "maxItems" : 99
+                                }
+                            }
+                        }
+                    }
 				},
 				"minItems" : 0,
 				"maxItems" : 99

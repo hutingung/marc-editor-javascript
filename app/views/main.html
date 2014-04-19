@@ -14,31 +14,31 @@
     
     <div class="col-md-6">
         <form>
-        
-            <button ng-click="record.addField('002', 'tag002');">Add Control Field Tag</button><br/>
-            <button ng-click="record.removeField('002', 'tag002');">Remove Control Field Tag</button><br/>
+            <button ng-click="record.addControlField('002');">Add Control Field Tag</button><br/>
+            <button ng-click="record.removeField(record.001[0]);">Remove Control Field Tag</button><br/>
             
-            <button ng-click="record.addField('100', DataField('1','2'));">Add Data Field Tag</button><br/>
-            <button ng-click="record.removeField('100', DataField('1','2'));">Remove Data Field Tag</button><br/>
+            <button ng-click="record.addDataField('100');">Add Data Field Tag</button><br/>
+            <button ng-click="record.removeField(record.100[0]);">Remove Data Field Tag</button><br/>
             
             100 First <br/>
             Ind1: <input ng-model="record.100[0].ind1"/>
             Ind2: <input ng-model="record.100[0].ind2"/><br />
-            a: <input ng-model="record.100[0].a[0]"/>
-            <button ng-click="record.100[0].addSubfield('a','');">Add</button>
-            <button ng-click="record.100[0].removeSubfield('a','');">Remove</button><br />
-            d: <input ng-model="record.100[0].d[0]"/> <br />
-            b: <input ng-model="record.100[0].b[0]"/> <br />
+            a: <input ng-model="record.100[0].subfields.a[0].data"/><button ng-click="record.100[0].subfields.removeSubfield(record.100[0].subfields.a[0]);">Remove</button></br>
+            <button ng-click="record.100[0].subfields.addSubfield('a','');">Add</button>
+            <button ng-click="record.100[0].subfields.removeSubfield('a','');">Remove</button><br />
+            d: <input ng-model="record.100[0].subfields.d[0].data"/> <br />
+            b: <input ng-model="record.100[0].subfields.b[0].data"/> <br />
             
             100 Second<br/>
             Ind1: <input ng-model="record.100[1].ind1"/>
             Ind2: <input ng-model="record.100[1].ind2"/><br />
-            a: <input ng-model="record.100[1].a[0]"/>
-            <button ng-click="record.100[1].addSubfield('a','');">Add</button>
-            <button ng-click="record.100[1].removeSubfield('a','');">Remove</button><br />
-            d: <input ng-model="record.100[1].d[0]"/> <br />
-            b: <input ng-model="record.100[1].b[0]"/> <br />
-                
+            a: <input ng-model="record.100[1].subfields.a[0].data"/>
+            <button ng-click="record.100[1].subfields.addSubfield('a','');">Add</button>
+            <button ng-click="record.100[1].subfields.removeSubfield('a','');">Remove</button><br />
+            d: <input ng-model="record.100[1].subfields.d[0].data"/> <br />
+            b: <input ng-model="record.100[1].subfields.b[0].data"/> <br />
+              
+              <button type="button" class="btn btn-primary" ng-click="save()">Simpan</button>
             
         </form>
     </div>

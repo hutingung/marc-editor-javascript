@@ -15,10 +15,12 @@
     "ng-grid": "~2.0.7",
     "underscore": "~1.6.0",
     "alpaca": "*",
-    "jquery-tmpl": "*"
+    "jquery-tmpl": "*",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6"
+    "angular-scenario": "1.2.6",
+    "qunit": "~1.14.0"
   }
 }

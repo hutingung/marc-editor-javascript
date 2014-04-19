@@ -1,153 +1,4 @@
 'use strict';
-var DataField = function(ind1, ind2) {
-    this.ind1 = ind1;
-    this.ind2 = ind2;   
-    this.addSubfield = function(code, data) {
-        if(angular.isUndefined(this[code])) {
-           this[code] = new Array(); 
-        }
-        this[code].push(data);
-    }
-    
-    this.removeSubfield = function(code, data) {
-        var subfield = _.without(this[code], data);
-        if(subfield.length == 0) {
-            delete this[code];
-        } else {
-            this[code] = subfield;
-        }
-        
-    }
-    
-    this.isEqual = function(target) {
-        var isEqual = true;
-        $.each(this, function(property, value) {
-            isEqual = _.isEqual(target[property], value) || _.isFunction(target[property]); 
-        });
-        return isEqual;
-    }
-}
-
-
-var Record = function(json) {
-    this.data = json;
-    var record = this;
-    this.isControlField = function (fieldName) {
-        var controlField = ["001","002","003","004","005","006","007","008","009", "841","842","843","844","845"];
-        return _.contains(controlField, fieldName);
-    }
-    
-    this.addField = function(tag, data) {
-        if(angular.isUndefined(this[tag])) {
-            this[tag] = new Array();
-        }
-        this[tag].push(data);
-    }
-    this.removeField = function(tag, data) {
-        if(angular.isUndefined(this[tag])) {
-            return;
-        }
-        
-        var field = _.clone(this[tag]);
-        if(this.isControlField(tag)) {
-            field = _.without(this[tag], data);
-        } else {
-            var index = 0;
-            $.each(this[tag], function(key, value) {
-                if(value.isEqual(data)) {
-                    field.splice(index, 1);
-                } else {
-                    index++;
-                }
-                
-            });
-        }
-        if(field.length == 0) {
-            delete this[tag];
-        } else {
-            this[tag] = field;
-        }
-    }
-    
-    this.init = function() {
-        if(angular.isUndefined(this.data)) {
-            return;
-        }
-        this.leader = this.data.leader;
-        $.each(this.data.fields, function(key, field) {
-            $.each(field, function(fieldName, fieldValue) {
-                var data;
-                if(record.isControlField(fieldName)) {
-                    data = fieldValue;
-                } else {
-                    data = new DataField(fieldValue.ind1, fieldValue.ind2);
-                    $.each(fieldValue.subfields, function(key, subfield) {
-                        $.each(subfield, function(subfieldName, subfieldValue) {
-                            data.addSubfield(subfieldName, subfieldValue);
-                        });
-                    });
-                }
-                record.addField(fieldName, data);
-            });
-        });
-    }
-    
-    this.getJSON = function() {
-        var jsonRecord = {
-            "leader" : this.data.leader,
-            "fields" : []
-        };
-        $.each(this, function(fieldName, fieldValue) {
-            if(fieldName.length != 3) {
-                return;
-            }
-            $.each(fieldValue, function(key, _fieldValue) {
-                if(record.isControlField(fieldName)) {                   
-                    var field = {};
-                    field[fieldName] = _fieldValue;
-                } else {
-                    var field = {};
-                    field[fieldName] = {
-                        "ind1" : _fieldValue.ind1,
-                        "ind2": _fieldValue.ind2,
-                        "subfields": []
-                    }
-                    $.each(_fieldValue, function(subfieldName, subfieldValue){
-                        var subfield = {};
-                        if(subfieldName != "ind1" && subfieldName != "ind2") {
-                            $.each(subfieldValue, function(key, _subfieldValue) {
-                                subfield[subfieldName] = _subfieldValue;
-                                field[fieldName].subfields.push(subfield);
-                            });
-                        }          
-                    });
-                }
-                jsonRecord.fields.push(field);
-            });
-        });
-        return jsonRecord;
-    }
-    this.isEqual = function(oldRecord) {
-        var equals = true;
-        var newRecord = this.getJSON();
-        $.each(oldRecord.fields, function(key, field) {
-            var found = _.find(newRecord.fields, function(_field) {
-                return _.isEqual(_field, field);
-            });
-            if(found == null || found.length == 0) {
-                equals = false;
-            }
-        });
-        return equals;
-    }
-    
-    this.isChanged = function() {
-        return !record.isEqual(this.data);
-    }
-    
-    this.init();
-}
-
 var Schema = function(title, type, description) {
     var schema = this;
     if(!angular.isUndefined(title) && title.length != 0) {
@@ -269,16 +120,19 @@ var SchemaFactory = function() {
                 }
                 
                 if(!angular.isUndefined(value.subf)) {
+                    var subfieldsSchema = new Schema("Subfields", "object");
                     $.each(value.subf, function(subfKey, subfValue){
                         var subfSchema = new Schema(subfValue.desc, "array");
-                        var subfItems = new Schema("", "string");
+                        var subfItems = new Schema("", "object");
+                        subfItems.addProperty("data", new Schema("", "string"));
                         if(subfValue.repeatable) {
                             subfSchema.addItem(subfItems, 0, 99);
                         } else {
                             subfSchema.addItem(subfItems, 0, 1);
                         }
-                        items.addProperty(subfKey, subfSchema);
+                        subfieldsSchema.addProperty(subfKey, subfSchema);
                     });
+                    items.addProperty("subfields", subfieldsSchema);
                 }
                 
                 
@@ -303,8 +157,13 @@ angular.module('marcEditorApp')
         $scope.DataField = function(ind1, ind2) {
             return new DataField(ind1, ind2);
         }
+        console.log("data", data, " json", record.getJSON());
+        console.log("record", record);
         //remove for the purpose for display - should not remove in production.
-        delete $scope.record.data;
+        //delete $scope.record.data;
+        
+        //$scope.json2marc = new json2marc(data);
+        //console.log($scope.json2marc);
     }).
     error(function(data, status, headers, config) {
       // called asynchronously if an error occurs
@@ -344,6 +203,7 @@ angular.module('marcEditorApp')
   
 angular.module('marcEditorApp')
   .controller('FormsCtrl', function ($scope, $http) {
+  
     $http({method: 'GET', url: '/data/marcsimple.json'}).success(function(data, status, headers, config) {
         var record = new Record(data);
         $scope.record = record;
