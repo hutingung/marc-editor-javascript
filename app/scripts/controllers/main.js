@@ -157,8 +157,13 @@ angular.module('marcEditorApp')
         $scope.DataField = function(ind1, ind2) {
             return new DataField(ind1, ind2);
         }
-        console.log("data", data, " json", record.getJSON());
-        console.log("record", record);
+        
+        $scope.$watch('record', function(newRecord){
+            if(!angular.isUndefined(newRecord)) {
+                $scope.jsonRecord = newRecord.getJSON();
+            }
+        }, true);
+        
         //remove for the purpose for display - should not remove in production.
         //delete $scope.record.data;
         

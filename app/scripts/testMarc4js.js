@@ -74,6 +74,53 @@ test("Data Field - Remove subfield", function() {
     deepEqual(subfields.a, [new Subfield(code, data, 200)], "expected to have one subfield remain");
 });
 
+test("Sort field position", function() {
+    var json = {
+        "leader":"01471cjm a2200349 a 4500",
+        "fields":
+        [
+            {
+                "001":"5674874"
+            },
+            {
+                "008":"930331s1963    nyuppn              eng d"
+            },
+            {
+                "100":
+                {
+                    "subfields":
+                    [
+                        {
+                            "a":"Dylan, Bob,"
+                        },
+                        {
+                            "b":"2001"
+                        },
+                        {
+                            "b":"2002"
+                        },
+                        {
+                            "d":"1941-"
+                        }
+                    ],
+                    "ind1":"1",
+                    "ind2":"#"
+                }
+            }
+        ]
+    };
+    var record = new Record(json);
+    deepEqual(record.getJSON(), json);
+    record.moveUp(record["008"][0]);
+    record.moveDown(record["008"][0]);
+    deepEqual(record.getJSON(), json);
+    record["100"][0].subfields.moveUp(record["100"][0].subfields["b"][0]);
+    record["100"][0].subfields.moveDown(record["100"][0].subfields["b"][0]);
+    
+    deepEqual(record.getJSON(), json);
+    
+});
+
 test("Record", function() {
     var json = {
         "leader":"01471cjm a2200349 a 4500",
@@ -114,6 +161,9 @@ test("Record", function() {
             },
             {
                 "005":"20030305110405.0"
+            },
+            {
+                "007":"sdubsmennmplu"
             },
             {
                 "007":"sdubsmennmplu"

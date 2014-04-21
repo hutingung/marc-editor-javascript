@@ -180,15 +180,7 @@ BaseObject.prototype.isJSONProperty = function(propertyName, propertyValue) {
     return _.isArray(propertyValue);
 }
 
-BaseObject.prototype.getSortedObject = function() {
-    /*
-        "100" : [{"name" : "100", "data": "test", "weight": 200}],
-        "200" : [{"name" : "200", "data": "test2001", "weight": 300},{"name" : "200", "data": "test2002", "weight": 100}]
-    */
-    /*  
-        [{"200": "test2002}, {"100": "test"}, {"200": "test2001"}]
-    
-    */
+BaseObject.prototype.getSortedProperty = function() {
     var obj = new Array();
     var baseObject = this;
     var propertyArray = new Array();
@@ -203,10 +195,48 @@ BaseObject.prototype.getSortedObject = function() {
     var sortedPropertyArray = _.sortBy(propertyArray, function(arrayChild) {
         return arrayChild.weight;
     });
-    $.each(sortedPropertyArray, function(key, arrayChild) {
+    return sortedPropertyArray;
+}
+
+BaseObject.prototype.getSortedJSON = function() {
+    var obj = new Array();
+    /*
+        "100" : [{"name" : "100", "data": "test", "weight": 200}],
+        "200" : [{"name" : "200", "data": "test2001", "weight": 300},{"name" : "200", "data": "test2002", "weight": 100}]
+    */
+    /*  
+        [{"200": "test2002}, {"100": "test"}, {"200": "test2001"}]
+    
+    */
+    $.each(this.getSortedProperty(), function(key, arrayChild) {
         obj.push(arrayChild.getJSON());
     });
     return obj;
+}
+
+BaseObject.prototype.moveUp = function(property) {
+    var baseObject = this;
+    $.each(this.getSortedProperty(), function(key, _property) {
+        if(_property.equals(property) && key > 0) {
+            var previous = baseObject.getSortedProperty()[key-1];
+            previous.weight = previous.weight + 100;
+            _property.weight = _property.weight - 100;
+        }
+    });
+    return this;
+}
+
+BaseObject.prototype.moveDown = function(property) {
+
+    var baseObject = this;
+    $.each(this.getSortedProperty(), function(key, _property) {
+        if(_property.equals(property) && key < _.size(baseObject.getSortedProperty())) {
+            var next = baseObject.getSortedProperty()[key+1];
+            next.weight = next.weight - 100;
+            _property.weight = _property.weight + 100;
+        }
+    });
+    return this;
 }
 
 Subfields.prototype = new BaseObject();
@@ -222,7 +252,7 @@ function Subfields() {
     }
     
     this.getJSON = function() {
-        return this.getSortedObject();
+        return this.getSortedJSON();
     }
 }
 
@@ -238,7 +268,6 @@ function Subfield(name, data, weight) {
         return subfield;
     }
 }
-
 
 DataField.prototype = new BaseObject();
 function DataField (name, ind1, ind2, weight) {
@@ -304,7 +333,7 @@ function Record(json) {
     
     this.init = function() {
         if(_.isUndefined(this.data)) {
-            return;
+            throw "You must defined json data."; 
         }
         this.leader = this.data.leader;
         $.each(this.data.fields, function(key, field) {
@@ -328,7 +357,7 @@ function Record(json) {
     this.getJSON = function() {
         var jsonRecord = {
             "leader" : this.data.leader,
-            "fields" : this.getSortedObject()
+            "fields" : this.getSortedJSON()
         };
         return jsonRecord;
     }

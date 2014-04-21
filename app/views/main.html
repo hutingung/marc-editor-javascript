@@ -9,13 +9,13 @@
 
 <div class="row">
     <div class="col-md-6">
-        <pre>{{ record | json }}</pre>
+        <pre>{{ jsonRecord | json }}</pre>
     </div>
     
     <div class="col-md-6">
         <form>
             <button ng-click="record.addControlField('002');">Add Control Field Tag</button><br/>
-            <button ng-click="record.removeField(record.001[0]);">Remove Control Field Tag</button><br/>
+            <button ng-click="record.removeField(record.002[0]);">Remove Control Field Tag</button><br/>
             
             <button ng-click="record.addDataField('100');">Add Data Field Tag</button><br/>
             <button ng-click="record.removeField(record.100[0]);">Remove Data Field Tag</button><br/>
