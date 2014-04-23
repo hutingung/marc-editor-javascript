@@ -1,0 +1,50 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">marc editor</h3>
+</div>
+<div class="row">
+
+    <div class="col-md-4">
+        <!--<pre>{{ record | json }}</pre>-->
+        <!--<pre>{{ myData | json }}</pre>-->
+    </div>
+    <div class="col-md-8">
+        <div>
+            <!--<div class="alert alert-danger"><ol><li ng-repeat="error in record.$errors.errors" >{{error.dataPath}}:{{error.message}}</li></ol></div>-->
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+
+    <div class="col-md-8">
+        <h2>Editor</h2>
+        <input type="text" ng-model="dataFieldTag"/><button ng-click="record.addDataField(dataFieldTag);refresh();">Add Data Field Tag</button><br/>
+        <input type="text" ng-model="controlFieldTag"/><button ng-click="record.addControlField(controlFieldTag);refresh();">Add Control Field Tag</button><br/>
+        <button ng-click="record.removeField(selectedItems[0]);refresh();">Remove Tag</button><br/>
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+    <div class="col-md-4">
+        <h2>Console</h2>
+        <div class="alert alert-danger">
+            Next validation in {{interval}} seconds
+            <ol>
+                <li ng-repeat="error in record.$errors.errors" >{{error.dataPath}}:{{error.message}}</li>
+            </ol>
+        
+        </div>
+        <!--<pre>{{ record | json }}</pre>-->
+        <!--
+        <pre>{{ record.getMarcJSON() | json }}</pre>
+        -->
+        <!--
+        <pre>{{ record.getMarcJSON() | json }}</pre>-->
+        
+    </div>
+    
+</div>
+    

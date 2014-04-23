@@ -4,7 +4,8 @@ angular.module('marcEditorApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ngGrid'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -23,6 +24,10 @@ angular.module('marcEditorApp', [
       .when('/forms', {
         templateUrl: 'views/forms.html',
         controller: 'FormsCtrl'
+      })
+      .when('/editor', {
+        templateUrl: 'views/editor.html',
+        controller: 'EditorCtrl'
       })
       .otherwise({
         redirectTo: '/'

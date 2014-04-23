@@ -88,66 +88,15 @@ function splitSubfields(bib) {
 	return subfields;
 }
 
-var VariableFields = function(fields) {
-	var variableFields = [];
-	for(var index in fields) {
-		var variableField = new VariableField(fields[index]);
-		variableFields.push(variableField);
-	}
-	return variableFields;
-};
-
-var VariableField = function(varField) {
-	for(var key in varField) {
-		var field = varField[key];
-		this.tag = key;
-		if (field.hasOwnProperty('subfields')) {
-			this.ind1 = field.ind1;
-			this.ind2 = field.ind2;
-			this.bib = joinSubfields(field.subfields);
-		} else {
-			this.bib = field;
-		}
-	}
-};
-
-function joinSubfields(subfields) {
-	var s = '';
-	for(var index in subfields) {
-		var subfield = subfields[index];
-		for(var key in subfield) {
-			var value = subfield[key];
-			s += '|' + key + value;
-		}
-	}
-	return s;
-}
-
-function splitSubfields(bib) {
-	var subfields = [];
-	var parts = bib.split("|");
-	for(var index in parts) {
-		var part = parts[index];
-		if (part.length > 0) {
-			var code = part.substring(0, 1);
-			var data = part.substring(1);
-			var subfield = {};
-			subfield[code] = data;
-			subfields.push(subfield);
-		}
-	}
-	return subfields;
-}
-
 function BaseObject() {
 }
 
 BaseObject.prototype.equals = function(obj) {
     var isEqual = true;
     $.each(this, function(property, value) {
-        if(!_.isFunction(obj[property])) {
+        if(!_.isFunction(obj[property]) && property.indexOf("$") != 0) {
             isEqual &= _.isEqual(obj[property], value);
-        } 
+        }
     });
     return isEqual;
 }
@@ -174,6 +123,19 @@ BaseObject.prototype.removeProperty = function(property) {
     } else {
         this[property.name] = propertyValue;
     }
+}
+
+BaseObject.prototype.getIndex = function(property) {
+    var index = -1;
+    if(_.isUndefined(property)) {
+        return index;
+    }
+    $.each(this[property.name], function(key, _property) {
+        if(_property.equals(property)) {
+            index = key;
+        }
+    });
+    return index;
 }
 
 BaseObject.prototype.isJSONProperty = function(propertyName, propertyValue) {
@@ -240,9 +202,11 @@ BaseObject.prototype.moveDown = function(property) {
 }
 
 Subfields.prototype = new BaseObject();
+Subfields.prototype.constructor = Subfields;
 
 function Subfields() {
     var weight = 0;
+    var subfields = this;
     this.addSubfield = function(code, data) {
         this.addProperty(new Subfield(code, data, weight+=100));
     }
@@ -254,9 +218,30 @@ function Subfields() {
     this.getJSON = function() {
         return this.getSortedJSON();
     }
+        
+    this.update = function(szSubfields) {
+        var aszSubfield = szSubfields.split("|");
+        $.each(aszSubfield, function(key, _szSubfield) {
+            if(_.size(_szSubfield) > 0) {
+                var code = _szSubfield.substring(0, 1);
+                var data = _szSubfield.substring(1);
+                subfields.addSubfield(code, data);
+            }
+        });
+    }
+    
+    this.getData = function() {        
+        var szSubfields = "";
+        $.each(this.getSortedProperty(), function(key, arrayChild) {
+            var subfield = "|" + arrayChild.name + arrayChild.data;
+            szSubfields += subfield;
+        });
+        return szSubfields;
+    }
 }
 
 Subfield.prototype = new BaseObject();
+Subfield.prototype.constructor = Subfield;
 function Subfield(name, data, weight) {
     this.name = name;
     this.data = data;
@@ -270,13 +255,15 @@ function Subfield(name, data, weight) {
 }
 
 DataField.prototype = new BaseObject();
+DataField.prototype.constructor = DataField;
+
 function DataField (name, ind1, ind2, weight) {
     this.name = name;
     this.ind1 = ind1;
     this.ind2 = ind2;
     this.weight = weight;
     this.subfields = new Subfields();
-    
+    this.data;
     this.getJSON = function() {
         var dataField = {};
         dataField[this.name] = {
@@ -286,9 +273,38 @@ function DataField (name, ind1, ind2, weight) {
         };
         return dataField;
     }
+    
+    this.getData = function() {
+    
+        var szData = new String(this.data);
+        this.updateSubfields();
+        if(!szData.endsWith("|")) {
+            this.data = this.subfields.getData();
+        }
+        return this;
+    }
+    
+    
+    this.updateSubfields = function() {
+        var szData = new String(this.data);
+        if(_.size(this.data) > 0) {
+            this.subfields = new Subfields();
+            this.subfields.update(this.data);
+        }
+        return this;
+    }
+    
+}
+//TODO - should put under utiliy
+if (typeof String.prototype.endsWith !== 'function') {
+    String.prototype.endsWith = function(suffix) {
+        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+    };
 }
 
 ControlField.prototype = new BaseObject();
+ControlField.prototype.constructor = ControlField;
+
 function ControlField(name, data, weight) {
     this.name = name;
     this.data = data;
@@ -299,12 +315,23 @@ function ControlField(name, data, weight) {
         controlField[this.name] = this.data;
         return controlField;
     }
+    
+    this.getData = function() {
+        if(!_.isUndefined(this['ind1'])) {
+            delete this['ind1'];
+        }
+        if(!_.isUndefined(this['ind2'])) {
+            delete this['ind2'];
+        }
+        return this;
+    }
 }
 
 Record.prototype = new BaseObject();
-
-function Record(json) {
-    this.data = json;
+Record.prototype.constructor = Record;
+function Record(data, schema) {
+    this.data = data;
+    this.schema = schema;
     var record = this;
     var weight = 0;
     this.isControlField = function (fieldName) {
@@ -314,6 +341,14 @@ function Record(json) {
     
     this.addField = function(data) {
         this.addProperty(data);
+        this.validate();
+        if(this.isErrorAddedField(data)) {
+            this.removeField(data);
+        }
+    }
+    
+    this.removeField = function(data) {
+        this.removeProperty(data);
     }
     
     this.addControlField = function(tag) {
@@ -327,13 +362,10 @@ function Record(json) {
         this.addField(dataField);
     }
     
-    this.removeField = function(data) {
-        this.removeProperty(data);
-    }
-    
     this.init = function() {
         if(_.isUndefined(this.data)) {
-            throw "You must defined json data."; 
+            //throw "You must defined json data."; 
+            return ;
         }
         this.leader = this.data.leader;
         $.each(this.data.fields, function(key, field) {
@@ -354,7 +386,27 @@ function Record(json) {
         });
     }
     
+    
+    this.getData = function() {
+        var tags = [];
+        $.each(this.getSortedProperty(), function(key, arrayChild) {
+            tags.push(arrayChild.getData());
+        });
+        return tags;
+    }
+    
     this.getJSON = function() {
+        this.getData();//make sure binding is working TODO
+        var szJsonRecord = JSON.stringify(this);
+        var jsonRecord = JSON.parse(szJsonRecord);
+        delete jsonRecord.data;
+        delete jsonRecord.schema;
+        delete jsonRecord.$errors;
+        return jsonRecord;
+    }
+    
+    this.getMarcJSON = function() {
+        this.getData();//make sure binding is working TODO
         var jsonRecord = {
             "leader" : this.data.leader,
             "fields" : this.getSortedJSON()
@@ -362,11 +414,61 @@ function Record(json) {
         return jsonRecord;
     }
     this.isEqual = function(oldRecord) {
-        return _.isEqual(this.getJSON(), oldRecord);
+        return _.isEqual(this.getMarcJSON(), oldRecord);
     }
     
     this.isChanged = function() {
         return !record.isEqual(this.data);
+    }
+    
+    this.validate = function() {
+        if(_.isUndefined(this.schema)) {
+            return;
+        }
+        this.$errors = tv4.validateMultiple(this.getJSON(), this.schema, true, true);
+        //this.$errors = Validator.validate(this.getJSON(), this.schema);
+    }
+    
+    this.getPath = function(property) {
+        var path = "/" + property.name + "/" + this.getIndex(property);
+        //path = property.name + "[" + this.getIndex(property) + "]";
+        return path;
+        
+    }
+    
+    this.isErrorAddedField = function(property) {
+        var path = "/" + property.name;
+        if(_.isUndefined(this.$errors)) {
+            return {};
+        }
+        var errors = _.filter(this.$errors.errors, function(_error) {
+            //return (_error.property.indexOf(path) == 0);
+            return (_error.dataPath == path);
+        });
+        return errors.length > 0;
+    }
+    
+    this.isError = function(property) {
+        return (this.getError(property).length > 0);
+    }
+    
+    this.getError = function(property) {
+        return this.getErrorByPath(this.getPath(property));
+    }
+    
+    this.getErrorByPath = function(path) {
+        if(_.isUndefined(this.$errors)) {
+            return {};
+        }
+        var errors = _.filter(this.$errors.errors, function(_error) {
+            //return (_error.property.indexOf(path) == 0);
+            return (_error.dataPath.indexOf(path) == 0);
+        });
+        return errors;
+    }
+    
+    this.version = function() {
+        return "1.0";
     }
     
     this.init();

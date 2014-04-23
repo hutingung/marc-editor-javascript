@@ -74,6 +74,38 @@ test("Data Field - Remove subfield", function() {
     deepEqual(subfields.a, [new Subfield(code, data, 200)], "expected to have one subfield remain");
 });
 
+test("Data Field - bind string to subfield", function() {
+    var input = "|aDylan, Bob, |d1941-";
+    var subfields = getTestsubfields(); 
+    subfields.update(input);
+    var expected = {
+        "a": [new Subfield("a", "Dylan, Bob, ", 100)],
+        "d": [new Subfield("d", "1941-", 200)]
+    };
+    deepEqual(subfields.a, expected.a);
+    deepEqual(subfields.d, expected.d);
+    
+    input = "|aDylan, Bob, |d1941-|d1999-|aMartin Fowler";
+    subfields = getTestsubfields(); 
+    subfields.update(input);
+    expected = {
+        "a": [new Subfield("a", "Dylan, Bob, ", 100), new Subfield("a", "Martin Fowler", 400)],
+        "d": [new Subfield("d", "1941-", 200),new Subfield("d", "1999-", 300)]
+    };
+    deepEqual(subfields.a, expected.a);
+    deepEqual(subfields.d, expected.d);
+    
+});
+
+
+test("Data Field - get subfields data", function() {
+    var expected = "|aDylan, Bob, |d1941-";
+    var subfields = getTestsubfields(); 
+    subfields.addSubfield("a", "Dylan, Bob, ");
+    subfields.addSubfield("d", "1941-");
+    deepEqual(subfields.getData(), expected);
+});
+
 test("Sort field position", function() {
     var json = {
         "leader":"01471cjm a2200349 a 4500",
@@ -110,14 +142,14 @@ test("Sort field position", function() {
         ]
     };
     var record = new Record(json);
-    deepEqual(record.getJSON(), json);
+    deepEqual(record.getMarcJSON(), json);
     record.moveUp(record["008"][0]);
     record.moveDown(record["008"][0]);
-    deepEqual(record.getJSON(), json);
+    deepEqual(record.getMarcJSON(), json);
     record["100"][0].subfields.moveUp(record["100"][0].subfields["b"][0]);
     record["100"][0].subfields.moveDown(record["100"][0].subfields["b"][0]);
     
-    deepEqual(record.getJSON(), json);
+    deepEqual(record.getMarcJSON(), json);
     
 });
 
@@ -151,7 +183,7 @@ test("Record", function() {
         ]
     };
     var record = new Record(json);
-    deepEqual(record.getJSON(), json);
+    deepEqual(record.getMarcJSON(), json);
     json = {
         "leader":"01471cjm a2200349 a 4500",
         "fields":
@@ -554,7 +586,667 @@ test("Record", function() {
 
     record = new Record(json);
     
+    deepEqual(record.getMarcJSON(), json);
+});
+
+
+test("Record", function() {
+    var json = {
+        "leader":"01471cjm a2200349 a 4500",
+        "fields":
+        [
+            {
+                "001":"5674874"
+            },
+            {
+                "008":"930331s1963    nyuppn              eng d"
+            },
+            {
+                "100":
+                {
+                    "subfields":
+                    [
+                        {
+                            "a":"Dylan, Bob,"
+                        },
+                        {
+                            "d":"1941-"
+                        }
+                    ],
+                    "ind1":"1",
+                    "ind2":"#"
+                }
+            }
+        ]
+    };
+    var record = new Record(json);
+    var json = {
+          "100": [
+            {
+              "name": "100",
+              "ind1": "1",
+              "ind2": "#",
+              "weight": 300,
+              "subfields": {
+                "a": [
+                  {
+                    "name": "a",
+                    "data": "Dylan, Bob,",
+                    "weight": 100
+                  }
+                ],
+                "d": [
+                  {
+                    "name": "d",
+                    "data": "1941-",
+                    "weight": 200
+                  }
+                ]
+              },
+              "data": "|aDylan, Bob,|d1941-"
+            }
+          ],
+          "leader": "01471cjm a2200349 a 4500",
+          "001": [
+            {
+              "name": "001",
+              "data": "5674874",
+              "weight": 100
+            }
+          ],
+          "008": [
+            {
+              "name": "008",
+              "data": "930331s1963    nyuppn              eng d",
+              "weight": 200
+            }
+          ]
+        }
     deepEqual(record.getJSON(), json);
 });
+
+test("Record Validation", function() {
+    var schema = {
+      "title": "Marc 21",
+      "type": "object",
+      "description": "http://www.loc.gov/marc/bibliographic/ecbdhome.html",
+      "properties": {"100": {
+      "title": "Main Entry-Personal Name",
+      "type": "array",
+      "description": "http://www.loc.gov/marc/bibliographic/concise/bd100.html",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "weight": {
+            "title": "weight",
+            "type": "integer"
+          },
+          "data": {
+            "title": "data",
+            "type": "string"
+          },
+          "ind1": {
+            "title": "indicator 1",
+            "type": "string",
+            "enum": [
+              "0",
+              "1",
+              "3"
+            ]
+          },
+          "ind2": {
+            "title": "indicator 2",
+            "type": "string",
+            "enum": [
+              "#"
+            ]
+          },
+          "subfields": {
+            "title": "Subfields",
+            "type": "object",
+            "properties": {
+              "0": {
+                "title": "Authority record control number",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "4": {
+                "title": "Relator code",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "6": {
+                "title": "Linkage",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "8": {
+                "title": "Field link and sequence number",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "a": {
+                "title": "Personal name",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "b": {
+                "title": "Numeration",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "c": {
+                "title": "Titles and words associated with a name",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "d": {
+                "title": "Dates associated with a name",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "e": {
+                "title": "Relator term",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "f": {
+                "title": "Date of a work",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "g": {
+                "title": "Miscellaneous information",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "j": {
+                "title": "Attribution qualifier",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "k": {
+                "title": "Form subheading",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "l": {
+                "title": "Language of a work",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "n": {
+                "title": "Number of part/section of a work",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "p": {
+                "title": "Name of part/section of a work",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 99
+                }
+              },
+              "q": {
+                "title": "Fuller form of name",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "t": {
+                "title": "Title of a work",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              },
+              "u": {
+                "title": "Affiliation",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "weight": {
+                      "title": "weight",
+                      "type": "integer"
+                    }
+                  },
+                  "minItems": 0,
+                  "maxItems": 1
+                }
+              }
+            }
+          }
+        },
+        "minItems": 0,
+        "maxItems": 1
+      }
+    }
+        
+      }
+    }
+    
+    var data = {
+        "fields":
+        [   
+            {
+                "100":
+                {
+                    "subfields":
+                    [
+                        {
+                            "a":"Dylan, Bob,"
+                        },
+                        {
+                            "d":"1941-"
+                        }
+                    ],
+                    "ind1":"1",
+                    "ind2":"2"
+                }
+            }
+        ]
+    };
+
+    var record = new Record(data, schema);
+    record.validate();
+    equal(_.size(record.$errors.errors), 1);
+});
+
+test("json path", function() {
+    var data = {
+        "100": [{
+            "ind2": "2",
+            "subfields": {
+                "z": "123"
+            }
+        }]
+    }
+    var errors = {
+      "errors": [
+        {
+          "message": "No enum match for: \"a\"",
+          "code": 1,
+          "dataPath": "/100/0/ind2",
+          "schemaPath": "/properties/100/items/properties/ind2/type",
+          "subErrors": null
+        },
+        {
+          "message": "Unknown property (not in schema)",
+          "code": 1000,
+          "dataPath": "/100/0/subfields/z",
+          "schemaPath": "",
+          "subErrors": null
+        }
+      ]
+    }
+    
+    
+    $.each(errors.errors, function(key, error) {
+        var selectors = error.dataPath.substring(1).split("/");
+        switch(_.size(selectors) - 1) {
+            case 1: 
+                data[selectors[0]].error = error;
+                break;
+            case 2: 
+                data[selectors[0]][selectors[1]].error = error;
+                break;
+            case 3: 
+                data[selectors[0]][selectors[1]][selectors[2]].error = error;
+                break;
+            case 4: 
+                data[selectors[0]][selectors[1]][selectors[2]][selectors[3]].error = error;
+                break;
+        }
+        
+    });
+    ok(true);
+    
+    var path = "/100/0/ind2";
+    var error = _.find(errors.errors, function(_error) {
+        return (_error.dataPath == path);
+    });
+});
+
+
+test("get array index", function() {
+    var data = {
+        "fields":
+        [   
+            {
+                "100":
+                {
+                    "subfields":
+                    [
+                        {
+                            "a":"Dylan, Bob,"
+                        },
+                        {
+                            "d":"1941-"
+                        }
+                    ],
+                    "ind1":"1",
+                    "ind2":"2"
+                }
+            }
+        ]
+    };
+
+    var record = new Record(data);
+    ok(true);
+});
+
 
 

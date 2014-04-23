@@ -70,7 +70,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 1600px;
     }
 
     /* Remove the padding we set earlier */
@@ -88,4 +88,14 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 750px; 
+    height: 600px;
+}
+
+.green {
+    color: red;
 }

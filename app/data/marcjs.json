@@ -1,0 +1,42 @@
+{
+  "leader": "01471cjm a2200349 a 4500",
+  "100": [
+    {
+      "name": "100",
+      "ind1": "1",
+      "ind2": "#",
+      "weight": 300,
+      "subfields": {
+        "a": [
+          {
+            "name": "a",
+            "data": "Dylan, Bob,",
+            "weight": 100
+          }
+        ],
+        "d": [
+          {
+            "name": "d",
+            "data": "1941-a",
+            "weight": 200
+          }
+        ]
+      },
+      "data": "|aDylan, Bob,|d1941-a"
+    }
+  ],
+  "001": [
+    {
+      "name": "001",
+      "data": "5674874",
+      "weight": 100
+    }
+  ],
+  "008": [
+    {
+      "name": "008",
+      "data": "930331s1963    nyuppn              eng d",
+      "weight": 200
+    }
+  ]
+}

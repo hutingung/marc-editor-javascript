@@ -15,19 +15,6 @@
             "008":"930331s1963    nyuppn              eng d"
         },
         {
-            "035":
-            {
-                "subfields":
-                [
-                    {
-                        "9":"(DLC)   93707283"
-                    }
-                ],
-                "ind1":" ",
-                "ind2":" "
-            }
-        },
-        {
             "906":
             {
                 "subfields":
@@ -187,9 +174,6 @@
                     },
                     {
                         "h":"[sound recording]."
-                    },
-                    {
-                        "a":"The freewheelin' Bob Dylan2"
                     }
                 ],
                 "ind1":"1",

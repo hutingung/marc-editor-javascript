@@ -1,0 +1,18 @@
+{
+  "errors": [
+    {
+      "message": "No enum match for: \"a\"",
+      "code": 1,
+      "dataPath": "/100/0/ind2",
+      "schemaPath": "/properties/100/items/properties/ind2/type",
+      "subErrors": null
+    },
+    {
+      "message": "Unknown property (not in schema)",
+      "code": 1000,
+      "dataPath": "/100/0/subfields/z",
+      "schemaPath": "",
+      "subErrors": null
+    }
+  ]
+}
