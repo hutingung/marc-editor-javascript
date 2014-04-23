@@ -1,24 +1,4327 @@
 {
-    "fields": {
-        "016": {
-            "label": "Library of Congress Control Number",
-            "fields": {
-                "item": {
-                    "fields": {
-                        "ind1": {
-                            "optionLabels": [
-                              "Source specified in subfield $2",
-                              "Library and Archives Canada"
-                            ]
-                          },
-                          "ind2": {
-                            "optionLabels": [
-                              "Undefined"
-                            ]
-                          }
-                    }
-                }
+  "fields": {
+    "100": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Forename",
+                "Surname",
+                "Family name"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
             }
+          }
         }
+      }
+    },
+    "110": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "111": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "130": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "210": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No added entry",
+                "Added entry"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Other abbreviated title",
+                "Abbreviated key title"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "222": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "240": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Not printed or displayed",
+                "Printed or displayed"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "242": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No added entry",
+                "Added entry"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "243": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Not printed or displayed",
+                "Printed or displayed"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "245": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No added entry",
+                "Added entry"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "246": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Note, no added entry",
+                "Note, added entry",
+                "No note, no added entry",
+                "No note, added entry"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Portion of title",
+                "Parallel title",
+                "Distinctive title",
+                "Other title",
+                "Cover title",
+                "Added title page title",
+                "Caption title",
+                "Running title",
+                "Spine title",
+                "No type specified"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "247": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No added entry",
+                "Added entry"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "250": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "254": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "255": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "256": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "257": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "258": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "260": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Intervening publisher",
+                "Current/latest publisher",
+                "Not applicable/No information provided/Earliest available publisher"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "263": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "264": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Intervening",
+                "Current/latest",
+                "Not applicable/No information provided/Earliest"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Production",
+                "Publication",
+                "Distribution",
+                "Manufacture",
+                "Copyright notice date"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "270": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Primary",
+                "Secondary",
+                "No level specified"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Mailing",
+                "Type specified in subfield $i",
+                "No type specified"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "300": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "306": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "307": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Hours"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "310": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "321": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "336": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "337": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "338": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "340": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "342": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Horizontal coordinate system",
+                "Vertical coordinate system"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Geographic",
+                "Map projection",
+                "Grid coordinate system",
+                "Local planar",
+                "Local",
+                "Geodetic model",
+                "Altitude",
+                "Method specified in $2",
+                "Depth"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "343": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "344": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "345": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "346": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "347": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "351": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "352": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "355": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Document",
+                "Title",
+                "Abstract",
+                "Contents note",
+                "Author",
+                "Record",
+                "None of the above"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "357": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "362": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Formatted style",
+                "Unformatted note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "363": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Starting information",
+                "Ending information",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Closed",
+                "Open",
+                "Not specified"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "365": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "366": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "377": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Source specified in subfield $2",
+                "MARC language code Code from: MARC Code List for Languages."
+              ]
+            }
+          }
+        }
+      }
+    },
+    "380": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "381": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "382": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Medium of performance",
+                "Partial medium of performance",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Not intended for access",
+                "Intended for access",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "383": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "384": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Original key",
+                "Transposed key",
+                "Relationship to original unknown"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "385": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "386": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "440": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "490": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Series not traced",
+                "Series traced"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "500": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "501": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "502": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "504": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "505": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Contents",
+                "Incomplete contents",
+                "Partial contents",
+                "No display constant generated"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Enhanced",
+                "Basic"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "506": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No restrictions",
+                "Restrictions apply",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "507": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "508": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "510": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Coverage unknown",
+                "Coverage complete",
+                "Coverage is selective",
+                "Location in source not given",
+                "Location in source given"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "511": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Cast"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "513": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "514": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "515": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "516": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Type of file"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "518": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "520": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Subject",
+                "Review",
+                "Scope and content",
+                "Abstract",
+                "Content advice",
+                "No display constant generated",
+                "Summary"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "521": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Reading grade level",
+                "Interest age level",
+                "Interest grade level",
+                "Special audience characteristics",
+                "Motivation/interest level",
+                "No display constant generated",
+                "Audience"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "522": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Geographic coverage"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "524": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Cite as"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "525": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "526": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Reading program",
+                "No display constant generated"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "530": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "533": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "534": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "535": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Holder of originals",
+                "Holder of duplicates"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "536": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "538": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "540": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "541": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Private",
+                "Not private",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "542": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Private",
+                "Not private",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "544": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Associated materials",
+                "Related materials",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "545": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Biographical sketch",
+                "Administrative history",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "546": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "547": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "550": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "552": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "555": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Finding aids",
+                "No display constant generated",
+                "Indexes"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "556": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Documentation"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "561": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Private",
+                "Not private",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "562": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "563": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "565": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Case file characteristics",
+                "No display constant generated",
+                "File size"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "567": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Methodology"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "580": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "581": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Publications"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "583": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Private",
+                "Not private",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "584": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "585": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "586": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No display constant generated",
+                "Awards"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "588": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "600": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Forename",
+                "Surname",
+                "Family name"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "610": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "611": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "630": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "648": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Date or time period covered or depicted",
+                "Date or time period of creation or origin",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "650": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No level specified",
+                "Primary",
+                "Secondary",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "651": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "653": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No level specified",
+                "Primary",
+                "Secondary",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Topical term",
+                "Personal name",
+                "Corporate name",
+                "Meeting name",
+                "Chronological term",
+                "Geographic name",
+                "Genre/form term",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "654": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No level specified",
+                "Primary",
+                "Secondary",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "655": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Faceted",
+                "Basic"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Library of Congress Subject Headings",
+                "LC subject headings for children's literature",
+                "Medical Subject Headings",
+                "National Agricultural Library subject authority file",
+                "Source not specified",
+                "Canadian Subject Headings",
+                "Répertoire de vedettes-matière",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "656": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "657": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "658": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "662": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "700": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Forename",
+                "Surname",
+                "Family name"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Analytical entry",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "710": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Analytical entry",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "711": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Analytical entry",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "720": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Personal",
+                "Other",
+                "Not specified"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "730": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Analytical entry",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "740": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "No nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Analytical entry",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "751": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "752": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "753": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "754": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "760": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Main series"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "762": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Has subseries"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "765": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Translation of"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "767": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Translated as"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "770": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Has supplement"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "772": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Parent",
+                "No display constant generated",
+                "Supplement to"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "773": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "In"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "774": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Constituent unit"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "775": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Other edition available"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "776": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Available in another form"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "777": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Issued with"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "780": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Continues",
+                "Continues in part",
+                "Supersedes",
+                "Supersedes in part",
+                "Formed by the union of ... and ...",
+                "Absorbed",
+                "Absorbed in part",
+                "Separated from"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "785": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Continued by",
+                "Continued in part by",
+                "Superseded by",
+                "Superseded in part by",
+                "Absorbed by",
+                "Absorbed in part by",
+                "Split into ... and ...",
+                "Merged with ... to form ...",
+                "Changed back to"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "786": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Data source"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "787": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Display note",
+                "Do not display note"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Related item"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "800": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Forename",
+                "Surname",
+                "Family name"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "810": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "811": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Inverted name",
+                "Jurisdiction name",
+                "Name in direct order"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "830": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters",
+                "Number of nonfiling characters"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "841": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "842": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "843": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "844": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "845": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "850": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "852": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Library of Congress classification",
+                "Dewey Decimal classification",
+                "National Library of Medicine classification",
+                "Superintendent of Documents classification",
+                "Shelving control number",
+                "Title",
+                "Shelved separately",
+                "Source specified in subfield $2",
+                "Other scheme",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Not enumeration",
+                "Primary enumeration",
+                "Alternative enumeration",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "853": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "854": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "855": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "856": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Email",
+                "FTP",
+                "Remote login (Telnet)",
+                "Dial-up",
+                "HTTP",
+                "Method specified in subfield $2",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Resource",
+                "Version of resource",
+                "Related resource",
+                "No display constant generated",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "863": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "864": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "865": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "866": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "867": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "868": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "876": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "877": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "878": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "880": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {},
+            "ind2": {}
+          }
+        }
+      }
+    },
+    "882": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "883": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Fully machine-generated",
+                "Partially machine-generated",
+                "No information provided/not applicable"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "886": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Leader",
+                "Variable control fields (002-009)",
+                "Variable data fields (010-999)"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "887": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "001": {
+      "fields": {}
+    },
+    "003": {
+      "fields": {}
+    },
+    "005": {
+      "fields": {}
+    },
+    "006": {
+      "fields": {}
+    },
+    "007": {
+      "fields": {}
+    },
+    "008": {
+      "fields": {}
+    },
+    "010": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "013": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "015": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "016": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Source specified in subfield $2",
+                "Library and Archives Canada"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "017": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No display constant generated",
+                "Copyright or legal deposit number"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "018": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "020": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "022": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Continuing resource of international interest",
+                "Continuing resource not of international interest",
+                "No level specified"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "024": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "International Standard Recording Code",
+                "Universal Product Code",
+                "International Standard Music Number",
+                "International Article Number",
+                "Serial Item and Contribution Identifier",
+                "Source specified in subfield $2",
+                "Unspecified type of standard number or code"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No difference",
+                "Difference",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "025": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "026": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "027": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "028": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Issue number Number used to identify the issue designation, or serial identification, assigned by a publisher to a specific sound recording, side of a sound recording, or performance on a sound recording or to a group of sound recordings issued as a set.",
+                "Matrix number Master from which the specific recording was pressed.",
+                "Plate number Assigned by a publisher to a specific music publication.",
+                "Other music number",
+                "Videorecording number",
+                "Other publisher number"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "No note, no added entry",
+                "Note, added entry",
+                "Note, no added entry",
+                "No note, added entry"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "030": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "031": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "032": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "033": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Single date",
+                "Multiple single dates",
+                "Range of dates",
+                "No date information"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Capture",
+                "Broadcast",
+                "Finding",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "034": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Scale indeterminable/No scale recorded Used when no representative fraction is given in field 255.",
+                "Single scale",
+                "Range of scales"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Outer ring",
+                "Exclusion ring",
+                "Not applicable"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "035": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "036": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "037": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "038": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "040": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "041": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Item not a translation/does not include a translation",
+                "Item is or includes a translation",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Source specified in subfield $2",
+                "MARC language code"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "042": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "043": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "044": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "045": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Single date/time",
+                "Multiple single dates/times",
+                "Range of dates/times",
+                "Subfield $b or $c not present"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "046": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "047": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Source specified in subfield $2",
+                "MARC musical composition code"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "048": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Source specified in subfield ‡2",
+                "MARC code"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "050": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Item is in LC",
+                "Item is not in LC",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Assigned by LC",
+                "Assigned by agency other than LC"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "051": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "052": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "U.S. Dept. of Defense Classification",
+                "Source specified in subfield $2",
+                "Library of Congress Classification"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "055": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Work held by LAC",
+                "Work not held by LAC",
+                "Information not provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "LC-based call number assigned by LAC",
+                "Complete LC class number assigned by LAC",
+                "Incomplete LC class number assigned by LAC",
+                "LC-based call number assigned by the contributing library",
+                "Complete LC class number assigned by the contributing library",
+                "Incomplete LC class number assigned by the contributing library",
+                "Other call number assigned by LAC",
+                "Other class number assigned by LAC",
+                "Other call number assigned by the contributing library",
+                "Other class number assigned by the contributing library"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "060": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Item is in NLM",
+                "Item is not in NLM",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Assigned by NLM",
+                "Assigned by agency other than NLM"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "061": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "066": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "070": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Item is in NAL",
+                "Item is not in NAL"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "071": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "072": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "NAL subject category code list",
+                "Source specified in subfield $2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "074": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "080": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Full",
+                "Abridged",
+                "No information provided"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "082": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Full edition",
+                "Abridged edition",
+                "Other edition specified in subfield $2"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Assigned by LC May be used by organizations transcribing from LC copy.",
+                "Assigned by agency other than LC",
+                "No information provided"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "083": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Full edition",
+                "Abridged edition",
+                "Other edition specified in subfield $2"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "084": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "085": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "086": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Superintendent of Documents Classification System",
+                "Government of Canada Publications: Outline of Classification",
+                "Source specified in subfield $2"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "088": {
+      "fields": {
+        "item": {
+          "fields": {
+            "ind1": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            },
+            "ind2": {
+              "optionLabels": [
+                "Undefined"
+              ]
+            }
+          }
+        }
+      }
     }
+  }
 }
